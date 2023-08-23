@@ -14,8 +14,7 @@ RUN wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz \
   && make \
   && make install \
   && cd ~ \
-  && rm -rf ta-lib/ \
-  && pip install ta-lib
+  && rm -rf ta-lib/
 
 RUN pip install --no-cache-dir -r requirements.txt
 
