@@ -17,3 +17,9 @@ This project contains a Dockerfile that does all the work of downloading, instal
 2) Run the docker container: ```docker run -p 8888:8888 <tag>```.
 3) This will run a container with a ```jupyter notebook``` entrypoint. To access the notebook in your local browser, use the URL/token in the shell output provided by the docker run command.
 4) You should now be able to access the project in your local browser via jupyter.
+
+## Use Your Own Strategy
+1) All you have to do is run your own backtesting.py class strategy as a jupyter notebook.
+
+## Graphical Plotting
+1) This project installs the required Bokeh and jupyter-bokeh pip packages needed so that if you use the ```backtesting.plot()``` function, it will automatically plot a visual representation for you in the jupyter notebook.
