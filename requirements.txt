@@ -1,0 +1,4 @@
+ta-lib
+jupyterlab
+backtesting
+pandas
