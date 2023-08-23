@@ -1,4 +1,6 @@
 ta-lib
 jupyter
+jupyter-bokeh
+bokeh==2.4.3
 backtesting
 pandas

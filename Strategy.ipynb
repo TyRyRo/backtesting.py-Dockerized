@@ -1,12 +1,11 @@
 import pandas as pd
 import talib
-from backtesting import Strategy
-from backtesting import Backtest
+from backtesting import Strategy, Backtest
 from backtesting.lib import crossover
 from backtesting.test import GOOG
 
 #Writing this for the BUY case only for now. Longs only, in an up market.
-class ReversionDrive(Strategy):
+class EMA_cross(Strategy):
 
     # Declare the moving average values to be used in the crossover/threshold condition.
     # Since these are **CLASS** values, they can be optimized later by the engine.
@@ -33,9 +32,9 @@ class ReversionDrive(Strategy):
 
             elif crossover(self.ema2, self.ema1):
                 self.position.close()
-                self.sell()
+                #self.sell()
 
-bt = Backtest(GOOG, ReversionDrive, cash=1000, commission=0)
+bt = Backtest(GOOG, EMA_cross, cash=1000, commission=0)
 stats = bt.run()
 print(stats)
-#bt.plot()
+bt.plot()
