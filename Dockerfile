@@ -28,4 +28,4 @@ EXPOSE 8888/tcp
 
 USER backtester
 
-ENTRYPOINT [ "jupyter", "notebook" ]
+ENTRYPOINT [ "jupyter", "notebook", "--no-browser", "--ip=0.0.0.0" ]
