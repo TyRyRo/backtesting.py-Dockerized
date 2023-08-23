@@ -28,4 +28,4 @@ EXPOSE 8888/tcp
 
 USER backtester
 
-CMD [ "python", "Strategy.py" ]
+ENTRYPOINT [ "jupyter", "notebook" ]
