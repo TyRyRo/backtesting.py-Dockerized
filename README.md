@@ -22,4 +22,4 @@ This project contains a Dockerfile that does all the work of downloading, instal
 1) All you have to do is run your own backtesting.py class strategy as a jupyter notebook.
 
 ## Graphical Plotting
-1) This project installs the required Bokeh and jupyter-bokeh pip packages needed so that if you use the ```backtesting.plot()``` function, it will automatically plot a visual representation for you in the jupyter notebook.
+1) The Dockerfile instructions automatically install the required Bokeh and jupyter-bokeh pip packages needed so that if you use the ```backtesting.plot()``` function in your strategy code, it will plot a visual representation for you in your jupyter notebook.
