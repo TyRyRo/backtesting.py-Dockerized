@@ -20,7 +20,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-RUN chown -R backtester Strategy.py
+RUN chown -R backtester Strategy.ipynb
 RUN chown -R backtester requirements.txt
 
 EXPOSE 8888/tcp
