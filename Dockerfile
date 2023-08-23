@@ -24,7 +24,7 @@ COPY . .
 RUN chown -R backtester Strategy.py
 RUN chown -R backtester requirements.txt
 
-EXPOSE 8888/udp
+EXPOSE 8888/tcp
 
 USER backtester
 
