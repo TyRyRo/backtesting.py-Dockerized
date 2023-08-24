@@ -1,6 +1,6 @@
 import pandas as pd
 import talib
-from backtesting import Strategy, Backtest
+from backtesting import Backtest
 from backtesting.lib import crossover, TrailingStrategy
 from backtesting.test import GOOG
 
@@ -27,8 +27,6 @@ class MID_reversion(TrailingStrategy):
         if ((self.data.Low <= self.midprice) and (self.data.Close >= self.midprice) and (self.midprice > self.ema)):
             self.position.close()
             self.buy()
-        
-        
 
 bt = Backtest(GOOG, MID_reversion, cash=1000, commission=0)
 stats = bt.run()
