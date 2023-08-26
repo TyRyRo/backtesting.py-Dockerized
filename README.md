@@ -1,5 +1,5 @@
 # backtesting.py
-A Dockerized project that runs a backtesting.py strategy and produces the output of the backtest.
+A Dockerized project that runs a backtesting.py strategy in a Jupyter notebook with optional graphical plotting (see "Graphical Plotting" below).
 
 ## Project Context
 This project contains a Dockerfile that does all the work of downloading, installing and compiling the necessary tools required to run backtesting.py in a Linux environment.
@@ -22,4 +22,4 @@ This project contains a Dockerfile that does all the work of downloading, instal
 1) All you have to do is run your own backtesting.py class strategy as a jupyter notebook.
 
 ## Graphical Plotting
-1) The Dockerfile instructions automatically install the required Bokeh and jupyter-bokeh pip packages needed so that if you use the ```backtesting.plot()``` function in your strategy code, it will plot a visual representation for you in your jupyter notebook.
+1) The Dockerfile automatically installs the required Bokeh and jupyter-bokeh pip packages needed so that if you use the ```backtesting.plot()``` function in your strategy code, it will plot a visual representation for you in your jupyter notebook.
