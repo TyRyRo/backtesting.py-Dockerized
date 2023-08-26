@@ -13,14 +13,14 @@ RUN wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz \
   && ./configure --prefix=/usr --build=aarch64-unknown-linux-gnu \
   && make \
   && make install \
-  && cd ~ \
+  && cd /home/backtester \
   && rm -rf ta-lib/
 
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-RUN chown -R backtester Strategy.ipynb
+RUN chown -R backtester Strategy.py
 RUN chown -R backtester requirements.txt
 
 EXPOSE 8888/tcp
