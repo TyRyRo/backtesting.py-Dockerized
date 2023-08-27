@@ -11,6 +11,8 @@ This project contains a Dockerfile that does all the work of downloading, instal
 3) We copy this project's ```requirements.txt``` file into the container so that the image can do the work automatically of installing the required Python packages.
 4) We need to install **TA-Lib** from source code and compile it as an Aarch64 build: ```(--build=aarch64-unknown-linux-gnu)```. Feel free to change this ```--build``` flag's value to whatever you require. **TA-Lib** is a C-based program, so it needs to be installed first before the pip installed ta-lib Python wrapper can be installed.
 5) We expose *port 8888* for Jupyter use.
+# Important
+6) This project utilizes a self-signed certificate + key pair to run Jupyter Notebook in your local browser via TLS. The certificate and key are newly generated via the ```openssl``` section in the Dockerfile each time the image is built. The Jupyter ```ENTRYPOINT``` command in the Dockerfile uses them to run over https. When you run this in your browser, you may skip the warning if you understand that it is being caused by a self-signed certificate.
 
 ## Use Your Own Strategy
 1) All you have to do is add your own backtesting.py strategy file to the top level of this project as a .ipynb file called ```Strategy.ipynb```.
